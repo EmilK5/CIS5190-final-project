@@ -4,6 +4,7 @@ from torchvision import models
 from torchvision.models import EfficientNet_B0_Weights
 from typing import Any, Iterable, List
 
+
 class ResidualRegressionBlock(nn.Module):
     def __init__(self, size, dropout_p=0.2):
         super().__init__()
