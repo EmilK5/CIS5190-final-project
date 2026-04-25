@@ -17,7 +17,7 @@ def prepare_data(path: str) -> Tuple[torch.Tensor, torch.Tensor]:
         )
     ])
 
-    # 2. Extract the folder path where the grader's CSV is located
+    # 2. Extract the folder path where the CSV is located
     csv_directory = os.path.dirname(path)
     
     df = pd.read_csv(path)
