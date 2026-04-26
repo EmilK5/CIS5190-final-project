@@ -9,7 +9,7 @@ def prepare_data(path: str) -> Tuple[torch.Tensor, torch.Tensor]:
     
     # 1. Inference transform
     inference_transform = transforms.Compose([
-        transforms.Resize((448, 448)),
+        transforms.Resize((224, 224)),
         transforms.ToTensor(),
         transforms.Normalize(
             mean=[0.485, 0.456, 0.406],
@@ -17,7 +17,7 @@ def prepare_data(path: str) -> Tuple[torch.Tensor, torch.Tensor]:
         )
     ])
 
-    # 2. Extract the folder path where the CSV is located
+    # 2. Extract the folder path where the grader's CSV is located
     csv_directory = os.path.dirname(path)
     
     df = pd.read_csv(path)
